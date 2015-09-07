@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://vercha.github.io/shirley.github-io/"/>
-  <updated>2015-09-07T09:00:41.300Z</updated>
+  <updated>2015-09-07T10:00:33.744Z</updated>
   <id>http://vercha.github.io/shirley.github-io/</id>
   
   <author>
@@ -13,6 +13,19 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[test]]></title>
+    <link href="http://vercha.github.io/shirley.github-io/2015/09/07/test/"/>
+    <id>http://vercha.github.io/shirley.github-io/2015/09/07/test/</id>
+    <published>2015-09-07T10:00:33.000Z</published>
+    <updated>2015-09-07T10:00:33.744Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[my new post1]]></title>
