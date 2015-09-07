@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Hexo]]></title>
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/shirley.github-io/atom.xml" rel="self"/>
   <link href="http://vercha.github.io/shirley.github-io/"/>
   <updated>2015-09-07T10:00:33.744Z</updated>
   <id>http://vercha.github.io/shirley.github-io/</id>
