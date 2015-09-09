@@ -15,22 +15,29 @@
 
   <meta charset="UTF-8">
   
-    <title>Hexo</title>
+    <title>mark down使用入门 | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="John Doe">
     
 
     
-    <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://vercha.github.io/shirley.github-io/index.html">
+    <meta name="description" content="“设计模式”（Design Pattern）是针对编程中经常出现的、具有共性的问题，所提出的解决方法。著名的《设计模式》一书一共提出了23种模式。
+SingletonSingleton模式指的是一个“类”只能创造一个实例。由于JavaScript语言没有类，单个对象可以直接生成，所以实际上，没有必要部署Singleton模式。但是，还是可以做到的。
+生成实例的时候，调用getSingleton方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mark down使用入门">
+<meta property="og:url" content="http://vercha.github.io/shirley.github-io/2015/09/09/mark-down使用入门/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:description" content="“设计模式”（Design Pattern）是针对编程中经常出现的、具有共性的问题，所提出的解决方法。著名的《设计模式》一书一共提出了23种模式。
+SingletonSingleton模式指的是一个“类”只能创造一个实例。由于JavaScript语言没有类，单个对象可以直接生成，所以实际上，没有必要部署Singleton模式。但是，还是可以做到的。
+生成实例的时候，调用getSingleton方法">
+<meta property="og:updated_time" content="2015-09-09T15:12:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:title" content="mark down使用入门">
+<meta name="twitter:description" content="“设计模式”（Design Pattern）是针对编程中经常出现的、具有共性的问题，所提出的解决方法。著名的《设计模式》一书一共提出了23种模式。
+SingletonSingleton模式指的是一个“类”只能创造一个实例。由于JavaScript语言没有类，单个对象可以直接生成，所以实际上，没有必要部署Singleton模式。但是，还是可以做到的。
+生成实例的时候，调用getSingleton方法">
 
     
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -85,12 +92,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2015/09/09/mark-down使用入门/" title="mark down使用入门" itemprop="url">mark down使用入门</a>
@@ -104,23 +109,25 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <p>“设计模式”（Design Pattern）是针对编程中经常出现的、具有共性的问题，所提出的解决方法。著名的《设计模式》一书一共提出了23种模式。</p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目錄</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Singleton"><span class="toc-number">1.</span> <span class="toc-text">Singleton</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为了保证实例不被改写，可以关闭它的写入开关。"><span class="toc-number">2.</span> <span class="toc-text">为了保证实例不被改写，可以关闭它的写入开关。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考链接"><span class="toc-number">3.</span> <span class="toc-text">参考链接</span></a></li></ol>
+		
+		</div>
+		
+		<p>“设计模式”（Design Pattern）是针对编程中经常出现的、具有共性的问题，所提出的解决方法。著名的《设计模式》一书一共提出了23种模式。</p>
 <h2 id="Singleton">Singleton</h2><p>Singleton模式指的是一个“类”只能创造一个实例。由于JavaScript语言没有类，单个对象可以直接生成，所以实际上，没有必要部署Singleton模式。但是，还是可以做到的。</p>
 <p>生成实例的时候，调用getSingleton方法。该方法首先检查_singleton属性是否有值，如果有值就返回这个属性，如果为空则生成新的实例，并赋值给_singleton属性，然后返回这个实例。这样就保证了生成的实例都是同一个对象。</p>
 <h2 id="为了保证实例不被改写，可以关闭它的写入开关。">为了保证实例不被改写，可以关闭它的写入开关。</h2><p>也可以考虑使用Object.preventExtensions()、Object.seal()、Object.freeze()等方法，限制对实例进行写操作。</p>
 <h2 id="参考链接">参考链接</h2><ul>
 <li>Dr. Axel Rauschmayer，<a href="http://www.2ality.com/2011/04/singleton-pattern-in-javascript-not.html" target="_blank" rel="external">The Singleton pattern in JavaScript: not needed</a></li>
 </ul>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 
@@ -128,82 +135,43 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://vercha.github.io/shirley.github-io/2015/09/09/mark-down使用入门/" data-title="mark down使用入门 | Hexo" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/09/09/hello-world/" title="Hello World" itemprop="url">Hello World</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="John Doe" target="_blank" itemprop="author">John Doe</a>
-		
-  <p class="article-time">
-    <time datetime="2015-09-09T12:44:02.000Z" itemprop="datePublished"> 發表於 2015-09-09</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/09/09/hello-world/"  title="Hello World">
+ <strong>下一篇：</strong><br/> 
+ <span>Hello World
+</span>
+</a>
 </div>
 
-</footer>
+</nav>
 
+	
 
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目錄</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Singleton"><span class="toc-number">1.</span> <span class="toc-text">Singleton</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为了保证实例不被改写，可以关闭它的写入开关。"><span class="toc-number">2.</span> <span class="toc-text">为了保证实例不被改写，可以关闭它的写入开关。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考链接"><span class="toc-number">3.</span> <span class="toc-text">参考链接</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
@@ -325,12 +293,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -391,4 +436,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
