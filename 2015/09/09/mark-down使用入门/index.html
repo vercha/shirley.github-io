@@ -1,6 +1,6 @@
 
  <!DOCTYPE HTML>
-<html >
+<html lang="zh-CN">
 <head>
   
 <script type="text/javascript">
@@ -15,10 +15,10 @@
 
   <meta charset="UTF-8">
   
-    <title>mark down使用入门 | Hexo</title>
+    <title>mark down使用入门 | Shirley</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
-    <meta name="author" content="John Doe">
+    <meta name="author" content="Shirley">
     
 
     
@@ -28,11 +28,11 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
 <meta property="og:type" content="article">
 <meta property="og:title" content="mark down使用入门">
 <meta property="og:url" content="http://vercha.github.io/shirley.github-io/2015/09/09/mark-down使用入门/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Shirley">
 <meta property="og:description" content="“设计模式”（Design Pattern）是针对编程中经常出现的、具有共性的问题，所提出的解决方法。著名的《设计模式》一书一共提出了23种模式。
 SingletonSingleton模式指的是一个“类”只能创造一个实例。由于JavaScript语言没有类，单个对象可以直接生成，所以实际上，没有必要部署Singleton模式。但是，还是可以做到的。
 生成实例的时候，调用getSingleton方法">
-<meta property="og:updated_time" content="2015-09-09T15:12:03.000Z">
+<meta property="og:updated_time" content="2015-09-10T03:21:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mark down使用入门">
 <meta name="twitter:description" content="“设计模式”（Design Pattern）是针对编程中经常出现的、具有共性的问题，所提出的解决方法。著名的《设计模式》一书一共提出了23种模式。
@@ -40,7 +40,7 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
 生成实例的时候，调用getSingleton方法">
 
     
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Shirley" type="application/atom+xml">
     
     
     <link rel="icon" href="/shirley.github-io/img/favicon.ico">
@@ -59,24 +59,26 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
 <div>
 		
 			<div id="imglogo">
-				<a href="/shirley.github-io/"><img src="/shirley.github-io/img/logo.png" alt="Hexo" title="Hexo"/></a>
+				<a href="/shirley.github-io/"><img src="/shirley.github-io/img/logo.png" alt="Shirley" title="Shirley"/></a>
 			</div>
 			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/shirley.github-io/" title="Hexo">Hexo</a></h1>
-				<h2 class="blog-motto"></h2>
+				<h1 class="site-name"><a href="/shirley.github-io/" title="Shirley">Shirley</a></h1>
+				<h2 class="blog-motto">Life is a journey</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
 					<ul>
 					 
-						<li><a href="/shirley.github-io/">Home</a></li>
+						<li><a href="/shirley.github-io/">主页 | Home</a></li>
 					
-						<li><a href="/shirley.github-io/archives">Archives</a></li>
+						<li><a href="/shirley.github-io/">索引 | Index</a></li>
 					
-						<li><a href="/shirley.github-io/about">About</a></li>
+						<li><a href="/shirley.github-io/archives">归档 | Archives</a></li>
+					
+						<li><a href="/shirley.github-io/about">简介 | About</a></li>
 					
 					<li>
  					
@@ -102,17 +104,17 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
   </h1>
   <p class="article-author">By
        
-		<a href="/shirley.github-io/about" title="John Doe" target="_blank" itemprop="author">John Doe</a>
+		<a href="/shirley.github-io/about" title="Shirley" target="_blank" itemprop="author">Shirley</a>
 		
   <p class="article-time">
-    <time datetime="2015-09-09T14:40:39.000Z" itemprop="datePublished"> 發表於 2015-09-09</time>
+    <time datetime="2015-09-09T14:40:39.000Z" itemprop="datePublished"> 发表于 2015-09-09</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
+			<strong class="toc-title">文章目录</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Singleton"><span class="toc-number">1.</span> <span class="toc-text">Singleton</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为了保证实例不被改写，可以关闭它的写入开关。"><span class="toc-number">2.</span> <span class="toc-text">为了保证实例不被改写，可以关闭它的写入开关。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考链接"><span class="toc-number">3.</span> <span class="toc-text">参考链接</span></a></li></ol>
 		
@@ -131,13 +133,18 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
 <div class="article-catetags">
 
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/shirley.github-io/tags/博客，文章/">博客，文章</a>
+  </div>
+
 </div>
 
 
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://vercha.github.io/shirley.github-io/2015/09/09/mark-down使用入门/" data-title="mark down使用入门 | Hexo" data-tsina="null" class="share clearfix">
+	  <div data-url="http://vercha.github.io/shirley.github-io/2015/09/09/mark-down使用入门/" data-title="mark down使用入门 | Shirley" data-tsina="Shirley" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -162,27 +169,42 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
 </nav>
 
 	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/09/09/mark-down使用入门/" data-title="mark down使用入门" data-url="http://vercha.github.io/shirley.github-io/2015/09/09/mark-down使用入门/"></div>
+</section>
+
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
+  <strong class="toc-title">文章目录</strong>
  
  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Singleton"><span class="toc-number">1.</span> <span class="toc-text">Singleton</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为了保证实例不被改写，可以关闭它的写入开关。"><span class="toc-number">2.</span> <span class="toc-text">为了保证实例不被改写，可以关闭它的写入开关。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考链接"><span class="toc-number">3.</span> <span class="toc-text">参考链接</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
 
   
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/shirley.github-io/tags/博客，文章/" title="博客，文章">博客，文章<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -204,7 +226,7 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
 </div>
 
   <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
@@ -221,15 +243,21 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
 	
 	
 	<section class="info">
-		<p> Hello ,I&#39;m Larry Shirley in ECNU. <br/>
-			This is my blog,believe it or not.</p>
+		<p> Hello ,I&#39;m Shirley in ECNU. <br/>
+			Try to do better.</p>
 	</section>
 	 
 	<div class="social-font" class="clearfix">
 		
+		<a href="http://weibo.com/ShirleyVon" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/vercha" target="_blank" class="icon-github" title="github"></a>
 		
 		
 		
+		
+		<a href="https://www.facebook.com/Shirley" target="_blank" class="icon-facebook" title="facebook"></a>
 		
 		
 		
@@ -243,7 +271,7 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
 		<p class="copyright">
 		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
 		
-		<a href="/shirley.github-io/about" target="_blank" title="John Doe">John Doe</a>
+		<a href="/shirley.github-io/about" target="_blank" title="Shirley">Shirley</a>
 		
 		
 		</p>
@@ -379,6 +407,18 @@ $(document).ready(function(){
 
 
 
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"von"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
 
 
 
@@ -410,6 +450,15 @@ $(document).ready(function(){
 
 <!-- Analytics Begin -->
 
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', '67373264', 'auto');  
+ga('send', 'pageview');
+</script>
+
 
 
 
@@ -419,7 +468,7 @@ $(document).ready(function(){
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/shirley.github-io/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/shirley.github-io/img/scrollup.png"/></a>
 	</div>
 	<script src="/shirley.github-io/js/totop.js"></script>
 
