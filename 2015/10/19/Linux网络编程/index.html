@@ -16,29 +16,29 @@
 
   <meta charset="UTF-8">
   
-    <title>mark down使用入门 | Shirley</title>
+    <title>Linux网络编程 | Shirley</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Shirley">
     
 
     
-    <meta name="description" content="“设计模式”（Design Pattern）是针对编程中经常出现的、具有共性的问题，所提出的解决方法。著名的《设计模式》一书一共提出了23种模式。
-SingletonSingleton模式指的是一个“类”只能创造一个实例。由于JavaScript语言没有类，单个对象可以直接生成，所以实际上，没有必要部署Singleton模式。但是，还是可以做到的。
-生成实例的时候，调用getSingleton方法">
+    <meta name="description" content="####常用socket函数１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。
+123#include &amp;lt;sys/socket.h&amp;gt;int socket(int family,int type,int protocol); 　　　 返回：非负描述字－－－成功　　　-1－－－失败
+２、connect函数：当用socket建立了">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mark down使用入门">
-<meta property="og:url" content="http://vercha.github.io/shirley.github-io/2015/09/09/mark-down使用入门/index.html">
+<meta property="og:title" content="Linux网络编程">
+<meta property="og:url" content="http://vercha.github.io/shirley.github-io/2015/10/19/Linux网络编程/index.html">
 <meta property="og:site_name" content="Shirley">
-<meta property="og:description" content="“设计模式”（Design Pattern）是针对编程中经常出现的、具有共性的问题，所提出的解决方法。著名的《设计模式》一书一共提出了23种模式。
-SingletonSingleton模式指的是一个“类”只能创造一个实例。由于JavaScript语言没有类，单个对象可以直接生成，所以实际上，没有必要部署Singleton模式。但是，还是可以做到的。
-生成实例的时候，调用getSingleton方法">
-<meta property="og:updated_time" content="2015-09-10T03:21:57.000Z">
+<meta property="og:description" content="####常用socket函数１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。
+123#include &amp;lt;sys/socket.h&amp;gt;int socket(int family,int type,int protocol); 　　　 返回：非负描述字－－－成功　　　-1－－－失败
+２、connect函数：当用socket建立了">
+<meta property="og:updated_time" content="2015-10-23T14:38:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mark down使用入门">
-<meta name="twitter:description" content="“设计模式”（Design Pattern）是针对编程中经常出现的、具有共性的问题，所提出的解决方法。著名的《设计模式》一书一共提出了23种模式。
-SingletonSingleton模式指的是一个“类”只能创造一个实例。由于JavaScript语言没有类，单个对象可以直接生成，所以实际上，没有必要部署Singleton模式。但是，还是可以做到的。
-生成实例的时候，调用getSingleton方法">
+<meta name="twitter:title" content="Linux网络编程">
+<meta name="twitter:description" content="####常用socket函数１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。
+123#include &amp;lt;sys/socket.h&amp;gt;int socket(int family,int type,int protocol); 　　　 返回：非负描述字－－－成功　　　-1－－－失败
+２、connect函数：当用socket建立了">
 
     
     <link rel="alternative" href="/atom.xml" title="Shirley" type="application/atom+xml">
@@ -101,14 +101,14 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/shirley.github-io/2015/09/09/mark-down使用入门/" title="mark down使用入门" itemprop="url">mark down使用入门</a>
+      <a href="/shirley.github-io/2015/10/19/Linux网络编程/" title="Linux网络编程" itemprop="url">Linux网络编程</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/shirley.github-io/about" title="Shirley" target="_blank" itemprop="author">Shirley</a>
 		
   <p class="article-time">
-    <time datetime="2015-09-09T14:40:39.000Z" itemprop="datePublished"> 发表于 2015-09-09</time>
+    <time datetime="2015-10-19T12:09:39.000Z" itemprop="datePublished"> 发表于 2015-10-19</time>
     
   </p>
 </header>
@@ -117,17 +117,34 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Singleton"><span class="toc-number">1.</span> <span class="toc-text">Singleton</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为了保证实例不被改写，可以关闭它的写入开关。"><span class="toc-number">2.</span> <span class="toc-text">为了保证实例不被改写，可以关闭它的写入开关。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考链接"><span class="toc-number">3.</span> <span class="toc-text">参考链接</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p>“设计模式”（Design Pattern）是针对编程中经常出现的、具有共性的问题，所提出的解决方法。著名的《设计模式》一书一共提出了23种模式。</p>
-<h2 id="Singleton">Singleton</h2><p>Singleton模式指的是一个“类”只能创造一个实例。由于JavaScript语言没有类，单个对象可以直接生成，所以实际上，没有必要部署Singleton模式。但是，还是可以做到的。</p>
-<p>生成实例的时候，调用getSingleton方法。该方法首先检查_singleton属性是否有值，如果有值就返回这个属性，如果为空则生成新的实例，并赋值给_singleton属性，然后返回这个实例。这样就保证了生成的实例都是同一个对象。</p>
-<h2 id="为了保证实例不被改写，可以关闭它的写入开关。">为了保证实例不被改写，可以关闭它的写入开关。</h2><p>也可以考虑使用Object.preventExtensions()、Object.seal()、Object.freeze()等方法，限制对实例进行写操作。</p>
-<h2 id="参考链接">参考链接</h2><ul>
-<li>Dr. Axel Rauschmayer，<a href="http://www.2ality.com/2011/04/singleton-pattern-in-javascript-not.html" target="_blank" rel="external">The Singleton pattern in JavaScript: not needed</a></li>
-</ul>
+		<p>####常用socket函数<br>１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">socket</span><span class="params">(<span class="keyword">int</span> family,<span class="keyword">int</span> type,<span class="keyword">int</span> protocol)</span></span>; 　　　 </span><br><span class="line">返回：非负描述字－－－成功　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>２、connect函数：当用socket建立了套接口后，可以调用connect为这个套接字指明远程端的地址；如果是字节流套接口，connect就使用三次握手建立一个连接；如果是数据报套接口，connect仅指明远程端地址，而不向它发送任何数据。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span>　　 　 　 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">connect</span><span class="params">(<span class="keyword">int</span> sockfd,<span class="keyword">const</span> <span class="keyword">struct</span> sockaddr * servaddr,socklen_t</span><br><span class="line">addrlen)</span></span>; 　 </span><br><span class="line">返回：<span class="number">0</span>－－－成功　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>３、bind函数：为套接口分配一个本地IP和协议端口，对于网际协议，协议地址是32位IPv4地址或128位IPv6地址与16位的TCP或UDP端口号的组合；如指定端口为0，调用bind时内核将选择一个临时端口，如果指定一个通配IP地址，则要等到建立连接后内核才选择一个本地IP地址。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span> 　 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bind</span><span class="params">(<span class="keyword">int</span> sockfd,<span class="keyword">const</span> <span class="keyword">struct</span> sockaddr * myaddr,socklen_t </span><br><span class="line">addrlen)</span></span>; </span><br><span class="line">返回：<span class="number">0</span>－－－成功　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>４、listen函数：listen函数仅被TCP服务器调用，它的作用是将用sock创建的主动套接口转换成被动套接口，并等待来自客户端的连接请求。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span> </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">listen</span><span class="params">(<span class="keyword">int</span> sockfd,<span class="keyword">int</span> backlog)</span></span>; 　　 </span><br><span class="line">返回：<span class="number">0</span>－－－成功　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>５、accept函数：accept函数由TCP服务器调用，从已完成连接队列头返回一个已完成连接，如果完成连接队列为空，则进程进入睡眠状态。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span> 　　 　 　 　 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">accept</span><span class="params">(<span class="keyword">int</span> sockfd,<span class="keyword">struct</span> sockaddr * </span><br><span class="line">cliaddr,socklen_t * addrlen)</span></span>; 　 </span><br><span class="line">回：非负描述字－－－成功　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>６、inet_pton函数：将点分十进制串转换成网络字节序二进制值，此函数对IPv4地址和IPv6地址都能处理。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;arpa/inet.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">inet_pton</span><span class="params">(<span class="keyword">int</span> family,<span class="keyword">const</span> <span class="keyword">char</span> * strptr,<span class="keyword">void</span> * addrptr)</span></span>;</span><br><span class="line">返回：<span class="number">1</span>－－－成功　<span class="number">0</span>－－－输入不是有效的表达格式　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>７、inet_ntop函数：和inet_pton函数正好相反，inet_ntop函数是将网络字节序二进制值转换成点分十进制串。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;arpa/inet.h&gt;</span> 　 </span></span><br><span class="line"><span class="function"><span class="keyword">const</span> <span class="keyword">char</span> * <span class="title">inet_ntop</span><span class="params">(<span class="keyword">int</span> family,<span class="keyword">const</span> <span class="keyword">void</span> *</span><br><span class="line">addrptr,<span class="keyword">char</span> * strptr,size_t len)</span></span>; 　 </span><br><span class="line">返回：指向结果的指针－－－成功　　　<span class="literal">NULL</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>８、fock函数：在网络服务器中，一个服务端口可以允许一定数量的客户端同时连接，这时单进程是不可能实现的，而fock就分配一个子进程和客户端会话，当然，这只是fock的一个典型应用。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span> 　 </span></span><br><span class="line"><span class="keyword">pid_t</span> fock(<span class="keyword">void</span>);</span><br><span class="line">返回：在子进程中为<span class="number">0</span>，在父进程中为子进程ID　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>######与markdown相关的工具：</p>
+<hr>
+<ol>
+<li><a href="http://droplr.com/" target="_blank" rel="external">Droplr</a></li>
+<li><a href="http://www.getcloudapp.com/" target="_blank" rel="external">Cloudapp</a></li>
+<li><a href="https://itunes.apple.com/cn/app/yi-xiang/id672522335?mt=12&amp;ign-mpt=uo%3D4" target="_blank" rel="external">ezShare for Mac</a></li>
+<li><a href="http://weibotuchuang.sinaapp.com/" target="_blank" rel="external">围脖图床修复计划</a></li>
+</ol>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -145,7 +162,7 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://vercha.github.io/shirley.github-io/2015/09/09/mark-down使用入门/" data-title="mark down使用入门 | Shirley" data-tsina="Shirley" class="share clearfix">
+	  <div data-url="http://vercha.github.io/shirley.github-io/2015/10/19/Linux网络编程/" data-title="Linux网络编程 | Shirley" data-tsina="Shirley" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -158,19 +175,11 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/shirley.github-io/2015/09/13/语义化/" title="语义化">
-  <strong>上一篇：</strong><br/>
-  <span>
-  语义化</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/shirley.github-io/2015/09/09/hello-world/"  title="Hello World">
+<a href="/shirley.github-io/2015/09/13/语义化/"  title="语义化">
  <strong>下一篇：</strong><br/> 
- <span>Hello World
+ <span>语义化
 </span>
 </a>
 </div>
@@ -179,7 +188,7 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/09/09/mark-down使用入门/" data-title="mark down使用入门" data-url="http://vercha.github.io/shirley.github-io/2015/09/09/mark-down使用入门/"></div>
+	<div class="ds-thread" data-thread-key="2015/10/19/Linux网络编程/" data-title="Linux网络编程" data-url="http://vercha.github.io/shirley.github-io/2015/10/19/Linux网络编程/"></div>
 </section>
 
 
@@ -189,7 +198,7 @@ SingletonSingleton模式指的是一个“类”只能创造一个实例。由�
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Singleton"><span class="toc-number">1.</span> <span class="toc-text">Singleton</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为了保证实例不被改写，可以关闭它的写入开关。"><span class="toc-number">2.</span> <span class="toc-text">为了保证实例不被改写，可以关闭它的写入开关。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考链接"><span class="toc-number">3.</span> <span class="toc-text">参考链接</span></a></li></ol>
+ 
  
   </div>
 

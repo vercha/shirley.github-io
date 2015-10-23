@@ -96,6 +96,87 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/shirley.github-io/2015/10/19/Linux网络编程/" title="Linux网络编程" itemprop="url">Linux网络编程</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/shirley.github-io/about" title="Shirley" target="_blank" itemprop="author">Shirley</a>
+		
+  <p class="article-time">
+    <time datetime="2015-10-19T12:09:39.000Z" itemprop="datePublished"> 发表于 2015-10-19</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>####常用socket函数<br>１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">socket</span><span class="params">(<span class="keyword">int</span> family,<span class="keyword">int</span> type,<span class="keyword">int</span> protocol)</span></span>; 　　　 </span><br><span class="line">返回：非负描述字－－－成功　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>２、connect函数：当用socket建立了套接口后，可以调用connect为这个套接字指明远程端的地址；如果是字节流套接口，connect就使用三次握手建立一个连接；如果是数据报套接口，connect仅指明远程端地址，而不向它发送任何数据。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span>　　 　 　 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">connect</span><span class="params">(<span class="keyword">int</span> sockfd,<span class="keyword">const</span> <span class="keyword">struct</span> sockaddr * servaddr,socklen_t</span><br><span class="line">addrlen)</span></span>; 　 </span><br><span class="line">返回：<span class="number">0</span>－－－成功　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>３、bind函数：为套接口分配一个本地IP和协议端口，对于网际协议，协议地址是32位IPv4地址或128位IPv6地址与16位的TCP或UDP端口号的组合；如指定端口为0，调用bind时内核将选择一个临时端口，如果指定一个通配IP地址，则要等到建立连接后内核才选择一个本地IP地址。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span> 　 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bind</span><span class="params">(<span class="keyword">int</span> sockfd,<span class="keyword">const</span> <span class="keyword">struct</span> sockaddr * myaddr,socklen_t </span><br><span class="line">addrlen)</span></span>; </span><br><span class="line">返回：<span class="number">0</span>－－－成功　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>４、listen函数：listen函数仅被TCP服务器调用，它的作用是将用sock创建的主动套接口转换成被动套接口，并等待来自客户端的连接请求。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span> </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">listen</span><span class="params">(<span class="keyword">int</span> sockfd,<span class="keyword">int</span> backlog)</span></span>; 　　 </span><br><span class="line">返回：<span class="number">0</span>－－－成功　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>５、accept函数：accept函数由TCP服务器调用，从已完成连接队列头返回一个已完成连接，如果完成连接队列为空，则进程进入睡眠状态。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span> 　　 　 　 　 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">accept</span><span class="params">(<span class="keyword">int</span> sockfd,<span class="keyword">struct</span> sockaddr * </span><br><span class="line">cliaddr,socklen_t * addrlen)</span></span>; 　 </span><br><span class="line">回：非负描述字－－－成功　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>６、inet_pton函数：将点分十进制串转换成网络字节序二进制值，此函数对IPv4地址和IPv6地址都能处理。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;arpa/inet.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">inet_pton</span><span class="params">(<span class="keyword">int</span> family,<span class="keyword">const</span> <span class="keyword">char</span> * strptr,<span class="keyword">void</span> * addrptr)</span></span>;</span><br><span class="line">返回：<span class="number">1</span>－－－成功　<span class="number">0</span>－－－输入不是有效的表达格式　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>７、inet_ntop函数：和inet_pton函数正好相反，inet_ntop函数是将网络字节序二进制值转换成点分十进制串。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;arpa/inet.h&gt;</span> 　 </span></span><br><span class="line"><span class="function"><span class="keyword">const</span> <span class="keyword">char</span> * <span class="title">inet_ntop</span><span class="params">(<span class="keyword">int</span> family,<span class="keyword">const</span> <span class="keyword">void</span> *</span><br><span class="line">addrptr,<span class="keyword">char</span> * strptr,size_t len)</span></span>; 　 </span><br><span class="line">返回：指向结果的指针－－－成功　　　<span class="literal">NULL</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>８、fock函数：在网络服务器中，一个服务端口可以允许一定数量的客户端同时连接，这时单进程是不可能实现的，而fock就分配一个子进程和客户端会话，当然，这只是fock的一个典型应用。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span> 　 </span></span><br><span class="line"><span class="keyword">pid_t</span> fock(<span class="keyword">void</span>);</span><br><span class="line">返回：在子进程中为<span class="number">0</span>，在父进程中为子进程ID　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
+<p>######与markdown相关的工具：</p>
+<hr>
+<ol>
+<li><a href="http://droplr.com/" target="_blank" rel="external">Droplr</a></li>
+<li><a href="http://www.getcloudapp.com/" target="_blank" rel="external">Cloudapp</a></li>
+<li><a href="https://itunes.apple.com/cn/app/yi-xiang/id672522335?mt=12&amp;ign-mpt=uo%3D4" target="_blank" rel="external">ezShare for Mac</a></li>
+<li><a href="http://weibotuchuang.sinaapp.com/" target="_blank" rel="external">围脖图床修复计划</a></li>
+</ol>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/shirley.github-io/tags/博客，文章/">博客，文章</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/shirley.github-io/2015/10/19/Linux网络编程/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/10/19/Linux网络编程/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/shirley.github-io/2015/09/13/语义化/" title="语义化" itemprop="url">语义化</a>
   </h1>
   <p class="article-author">By
@@ -377,7 +458,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/shirley.github-io/tags/博客，文章/" title="博客，文章">博客，文章<sup>1</sup></a></li>
+				<li><a href="/shirley.github-io/tags/博客，文章/" title="博客，文章">博客，文章<sup>2</sup></a></li>
 			
 		
 		</ul>
