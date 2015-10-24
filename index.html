@@ -109,7 +109,7 @@
 </header>
     <div class="article-content">
         
-        <p>####常用socket函数<br>１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。</p>
+        <h4 id="常用socket函数">常用socket函数</h4><p>１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">socket</span><span class="params">(<span class="keyword">int</span> family,<span class="keyword">int</span> type,<span class="keyword">int</span> protocol)</span></span>; 　　　 </span><br><span class="line">返回：非负描述字－－－成功　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
 <p>２、connect函数：当用socket建立了套接口后，可以调用connect为这个套接字指明远程端的地址；如果是字节流套接口，connect就使用三次握手建立一个连接；如果是数据报套接口，connect仅指明远程端地址，而不向它发送任何数据。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span>　　 　 　 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">connect</span><span class="params">(<span class="keyword">int</span> sockfd,<span class="keyword">const</span> <span class="keyword">struct</span> sockaddr * servaddr,socklen_t</span><br><span class="line">addrlen)</span></span>; 　 </span><br><span class="line">返回：<span class="number">0</span>－－－成功　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
@@ -125,8 +125,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;arpa/inet.h&gt;</span> 　 </span></span><br><span class="line"><span class="function"><span class="keyword">const</span> <span class="keyword">char</span> * <span class="title">inet_ntop</span><span class="params">(<span class="keyword">int</span> family,<span class="keyword">const</span> <span class="keyword">void</span> *</span><br><span class="line">addrptr,<span class="keyword">char</span> * strptr,size_t len)</span></span>; 　 </span><br><span class="line">返回：指向结果的指针－－－成功　　　<span class="literal">NULL</span>－－－失败</span><br></pre></td></tr></table></figure>
 <p>８、fock函数：在网络服务器中，一个服务端口可以允许一定数量的客户端同时连接，这时单进程是不可能实现的，而fock就分配一个子进程和客户端会话，当然，这只是fock的一个典型应用。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span> 　 </span></span><br><span class="line"><span class="keyword">pid_t</span> fock(<span class="keyword">void</span>);</span><br><span class="line">返回：在子进程中为<span class="number">0</span>，在父进程中为子进程ID　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
-<p>######与markdown相关的工具：</p>
-<hr>
+<h6 id="与markdown相关的工具：">与markdown相关的工具：</h6><hr>
 <ol>
 <li><a href="http://droplr.com/" target="_blank" rel="external">Droplr</a></li>
 <li><a href="http://www.getcloudapp.com/" target="_blank" rel="external">Cloudapp</a></li>
@@ -158,6 +157,139 @@
 	
 	  	<span></span>
 		<a href="/shirley.github-io/2015/10/19/Linux网络编程/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/10/19/Linux网络编程/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/shirley.github-io/2015/10/01/设计模式/" title="设计模式" itemprop="url">设计模式</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/shirley.github-io/about" title="Shirley" target="_blank" itemprop="author">Shirley</a>
+		
+  <p class="article-time">
+    <time datetime="2015-10-01T14:09:39.000Z" itemprop="datePublished"> 发表于 2015-10-01</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h3 id="一、分类">一、分类</h3><hr>
+<p>创建类：</p>
+<ol>
+<li>Factory Method（工厂方法）</li>
+<li>Abstract Factory（抽象工厂）</li>
+<li>Builder（建造者）</li>
+<li>Prototype（原型）</li>
+<li>Singleton（单例）</li>
+</ol>
+<hr>
+<p>结构型：</p>
+<ol>
+<li>Adapter Class/Object（适配器）</li>
+<li>Bridge（桥接）</li>
+<li>Composite（组合）</li>
+<li>Decorator（装饰）</li>
+<li>Facade（外观）</li>
+<li>Flyweight（享元）</li>
+<li>Proxy（代理）</li>
+</ol>
+<hr>
+<p>行为型：</p>
+<ol>
+<li>Interpreter（解释器）</li>
+<li>Template Method（模板方法）</li>
+<li>Chain of Responsibility（责任链）</li>
+<li>Command（命令）</li>
+<li>Iterator（迭代器）</li>
+<li>Mediator（中介者）</li>
+<li>Memento（备忘录）</li>
+<li>Observer（观察者）</li>
+<li>State（状态）</li>
+<li>Strategy（策略）</li>
+<li>Visitor（访问者）</li>
+</ol>
+<h3 id="二、设计模式的六大原则">二、设计模式的六大原则</h3><hr>
+<ol>
+<li><p>开闭原则（Open Close Principle）</p>
+<blockquote>
+<p>开闭原则就是说对扩展开放，对修改关闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。</p>
+</blockquote>
+</li>
+<li><p>里氏代换原则（Liskov Substitution Principle）</p>
+<blockquote>
+<p>里氏代换原则中说，任何基类可以出现的地方，子类一定可以出现。 LSP是继承复用的基石，只有当衍生类可以替换掉基类，软件单位的功能不受到影响时，基类才能真正被复用，而衍生类也能够在基类的基础上增加新的行为。<br>里氏代换原则是对“开-闭”原则的补充。实现“开-闭”原则的关键步骤就是抽象化。而基类与子类的继承关系就是抽象化的具体实现，所以里氏代换原则是对实现抽象化的具体步骤的规范。</p>
+</blockquote>
+</li>
+<li><p>依赖倒转原则（Dependence Inversion Principle）</p>
+<blockquote>
+<p>这个是开闭原则的基础，具体内容：针对接口编程，依赖于抽象而不依赖于具体。</p>
+</blockquote>
+</li>
+<li><p>接口隔离原则（Interface Segregation Principle）</p>
+<blockquote>
+<p>这个原则的意思是：使用多个隔离的接口，比使用单个接口要好。降低依赖，降低耦合。</p>
+</blockquote>
+</li>
+<li><p>迪米特法则（最少知道原则）（Demeter Principle）</p>
+<blockquote>
+<p>一个实体应当尽量少的与其他实体之间发生相互作用，使得系统功能模块相对独立。</p>
+</blockquote>
+</li>
+<li><p>合成复用原则（Composite Reuse Principle）</p>
+<blockquote>
+<p>原则是尽量使用合成/聚合的方式，而不是使用继承。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="三、23种设计模式：">三、23种设计模式：</h3><hr>
+<ol>
+<li>工厂方法模式（Factory Method）</li>
+<li>抽象工厂模式（Abstract Factory）</li>
+<li>例模式（Singleton）</li>
+<li>建造者模式（Builder）</li>
+<li>原型模式（Prototype）<br>。。。未完待续</li>
+</ol>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/shirley.github-io/tags/设计模式/">设计模式</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/shirley.github-io/2015/10/01/设计模式/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/10/01/设计模式/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -459,6 +591,10 @@
 		
 			
 				<li><a href="/shirley.github-io/tags/博客，文章/" title="博客，文章">博客，文章<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/shirley.github-io/tags/设计模式/" title="设计模式">设计模式<sup>1</sup></a></li>
 			
 		
 		</ul>

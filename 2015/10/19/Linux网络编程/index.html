@@ -23,22 +23,22 @@
     
 
     
-    <meta name="description" content="####常用socket函数１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。
+    <meta name="description" content="常用socket函数１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。
 123#include &amp;lt;sys/socket.h&amp;gt;int socket(int family,int type,int protocol); 　　　 返回：非负描述字－－－成功　　　-1－－－失败
-２、connect函数：当用socket建立了">
+２、connect函数：当用socket建立了套接口后">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux网络编程">
 <meta property="og:url" content="http://vercha.github.io/shirley.github-io/2015/10/19/Linux网络编程/index.html">
 <meta property="og:site_name" content="Shirley">
-<meta property="og:description" content="####常用socket函数１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。
+<meta property="og:description" content="常用socket函数１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。
 123#include &amp;lt;sys/socket.h&amp;gt;int socket(int family,int type,int protocol); 　　　 返回：非负描述字－－－成功　　　-1－－－失败
-２、connect函数：当用socket建立了">
-<meta property="og:updated_time" content="2015-10-23T14:38:53.000Z">
+２、connect函数：当用socket建立了套接口后">
+<meta property="og:updated_time" content="2015-10-24T15:01:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux网络编程">
-<meta name="twitter:description" content="####常用socket函数１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。
+<meta name="twitter:description" content="常用socket函数１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。
 123#include &amp;lt;sys/socket.h&amp;gt;int socket(int family,int type,int protocol); 　　　 返回：非负描述字－－－成功　　　-1－－－失败
-２、connect函数：当用socket建立了">
+２、connect函数：当用socket建立了套接口后">
 
     
     <link rel="alternative" href="/atom.xml" title="Shirley" type="application/atom+xml">
@@ -117,11 +117,11 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#常用socket函数"><span class="toc-number">1.</span> <span class="toc-text">常用socket函数</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#与markdown相关的工具："><span class="toc-number">1.0.1.</span> <span class="toc-text">与markdown相关的工具：</span></a></li></ol></li></ol></li></ol>
 		
 		</div>
 		
-		<p>####常用socket函数<br>１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。</p>
+		<h4 id="常用socket函数">常用socket函数</h4><p>１、socket函数：为了执行网络输入输出，一个进程必须做的第一件事就是调用socket函数获得一个文件描述符。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">socket</span><span class="params">(<span class="keyword">int</span> family,<span class="keyword">int</span> type,<span class="keyword">int</span> protocol)</span></span>; 　　　 </span><br><span class="line">返回：非负描述字－－－成功　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
 <p>２、connect函数：当用socket建立了套接口后，可以调用connect为这个套接字指明远程端的地址；如果是字节流套接口，connect就使用三次握手建立一个连接；如果是数据报套接口，connect仅指明远程端地址，而不向它发送任何数据。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span>　　 　 　 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">connect</span><span class="params">(<span class="keyword">int</span> sockfd,<span class="keyword">const</span> <span class="keyword">struct</span> sockaddr * servaddr,socklen_t</span><br><span class="line">addrlen)</span></span>; 　 </span><br><span class="line">返回：<span class="number">0</span>－－－成功　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
@@ -137,8 +137,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;arpa/inet.h&gt;</span> 　 </span></span><br><span class="line"><span class="function"><span class="keyword">const</span> <span class="keyword">char</span> * <span class="title">inet_ntop</span><span class="params">(<span class="keyword">int</span> family,<span class="keyword">const</span> <span class="keyword">void</span> *</span><br><span class="line">addrptr,<span class="keyword">char</span> * strptr,size_t len)</span></span>; 　 </span><br><span class="line">返回：指向结果的指针－－－成功　　　<span class="literal">NULL</span>－－－失败</span><br></pre></td></tr></table></figure>
 <p>８、fock函数：在网络服务器中，一个服务端口可以允许一定数量的客户端同时连接，这时单进程是不可能实现的，而fock就分配一个子进程和客户端会话，当然，这只是fock的一个典型应用。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span> 　 </span></span><br><span class="line"><span class="keyword">pid_t</span> fock(<span class="keyword">void</span>);</span><br><span class="line">返回：在子进程中为<span class="number">0</span>，在父进程中为子进程ID　　　-<span class="number">1</span>－－－失败</span><br></pre></td></tr></table></figure>
-<p>######与markdown相关的工具：</p>
-<hr>
+<h6 id="与markdown相关的工具：">与markdown相关的工具：</h6><hr>
 <ol>
 <li><a href="http://droplr.com/" target="_blank" rel="external">Droplr</a></li>
 <li><a href="http://www.getcloudapp.com/" target="_blank" rel="external">Cloudapp</a></li>
@@ -177,9 +176,9 @@
  
 
 <div class="next">
-<a href="/shirley.github-io/2015/09/13/语义化/"  title="语义化">
+<a href="/shirley.github-io/2015/10/01/设计模式/"  title="设计模式">
  <strong>下一篇：</strong><br/> 
- <span>语义化
+ <span>设计模式
 </span>
 </a>
 </div>
@@ -198,7 +197,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#常用socket函数"><span class="toc-number">1.</span> <span class="toc-text">常用socket函数</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#与markdown相关的工具："><span class="toc-number">1.0.1.</span> <span class="toc-text">与markdown相关的工具：</span></a></li></ol></li></ol></li></ol>
  
   </div>
 
@@ -226,6 +225,10 @@
 		
 			
 				<li><a href="/shirley.github-io/tags/博客，文章/" title="博客，文章">博客，文章<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/shirley.github-io/tags/设计模式/" title="设计模式">设计模式<sup>1</sup></a></li>
 			
 		
 		</ul>
